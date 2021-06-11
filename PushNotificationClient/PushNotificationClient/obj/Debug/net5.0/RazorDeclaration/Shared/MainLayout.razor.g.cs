@@ -83,7 +83,7 @@ using PushNotificationClient.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\PushNotificationClient\PushNotificationClient\Shared\MainLayout.razor"
+#line 6 "C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\PushNotificationClient\PushNotificationClient\Shared\MainLayout.razor"
 using PushNotificationClient.Class;
 
 #line default
@@ -97,11 +97,21 @@ using PushNotificationClient.Class;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 24 "C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\PushNotificationClient\PushNotificationClient\Shared\MainLayout.razor"
+#line 25 "C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\PushNotificationClient\PushNotificationClient\Shared\MainLayout.razor"
  
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await base.OnAfterRenderAsync(firstRender);
+
+
+        var IsOnLine = await localStorage.GetItemAsync<bool>("ConnectionStatus");
+
+        if (IsOnLine)
+        {
+            await GetToken();
+        }
+
+
         if (firstRender)
             await RequestNotificationSubscriptionAsync();
 
@@ -118,17 +128,46 @@ using PushNotificationClient.Class;
 
     public async Task SubscribeToNotifications(NotificationSubscription subscription)
     {
-       
-        var response = await Http.PostAsJsonAsync("api/NotificationSubscribe", subscription);
-        //response.EnsureSuccessStatusCode();
-        
+        var IsOnLine = await localStorage.GetItemAsync<bool>("ConnectionStatus");
+
+        if (IsOnLine)
+        {
+            var JWToken = await localStorage.GetItemAsync<string>("JWT");
+
+            Http.DefaultRequestHeaders.Add("Authorization", "Bearer " + JWToken);
+            var response = await Http.PostAsJsonAsync("api/NotificationSubscribe", subscription);
+            //response.EnsureSuccessStatusCode();
+
+        }
+
+
     }
 
-    
+    public async Task GetToken()
+    {
+        var JWToken = await localStorage.GetItemAsync<string>("JWT");
+
+        if (JWToken == null)
+        {
+            UserInfo oUser = new UserInfo();
+
+            oUser.Email = "sss@dd.com";
+            oUser.Password = "eeee";
+
+            var response = await Http.PostAsJsonAsync("api/Token", oUser);
+            var message = response.Content.ReadAsStringAsync();
+
+            await localStorage.SetItemAsync("JWT", message.Result);
+        }
+
+    }
+
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService localStorage { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JSRuntime { get; set; }
     }

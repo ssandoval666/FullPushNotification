@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WO1ZcNwk3MVHAmBVaaw0a8916CAyXJCAlEZMiy0gpeJKF/XqUJqC1Evb8E369+I2uwrCnv4yL1lLla95+/zaJw==",
+  "dgSpecHash": "jRV7KEeCFyhx2HXHn2q1L95FS80GYXAu63iVXDkBOUy8OG/fqgxCeV5R7ALJGUJZMRxHQXj1v8/tGQTQl38tHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sebastian Sandoval\\Documents\\GitHub\\FullPushNotification\\WebApiPushNotification\\WebApiPushNotification\\WebApiPushNotification.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.7\\microsoft.aspnetcore.authentication.jwtbearer.5.0.7.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
@@ -18,6 +19,8 @@
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.11.1\\microsoft.identitymodel.jsonwebtokens.6.11.1.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.identitymodel.logging\\6.11.1\\microsoft.identitymodel.logging.6.11.1.nupkg.sha512",
+    "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.7.1\\microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
+    "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.7.1\\microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.11.1\\microsoft.identitymodel.tokens.6.11.1.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

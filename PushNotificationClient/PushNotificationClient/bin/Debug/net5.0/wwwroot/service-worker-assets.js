@@ -25,7 +25,7 @@
       "url": "_content\/Blazorise.Material\/blazorise.material.js"
     },
     {
-      "hash": "sha256-nFOtJ4s\/SS4IuvnYCWhcng8NZMXVNCAvsxL4NxIUNB8=",
+      "hash": "sha256-HK9gLy6q2CKtLVL4\/ec1JZGodV9RPnmdMQ9DtYF49oQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -837,11 +837,11 @@
       "url": "_framework\/dotnet.5.0.7.js"
     },
     {
-      "hash": "sha256-RlXbfYc4un\/Rw60FVKhYYFPhLVonl7kYfDDfjv7e9DY=",
+      "hash": "sha256-+Lkz2oirew2fn2PE5G1vef6bVPF28GbSlM7MRRGNboc=",
       "url": "_framework\/PushNotificationClient.dll"
     },
     {
-      "hash": "sha256-8BXxB79AqqDglRNruHiSDfAyMcvjDBG1cNzJQn0rxGA=",
+      "hash": "sha256-XJSVgcFio4mT\/jLERw3pZJHPIO9Q1PDdILJsCy9fdtM=",
       "url": "_framework\/PushNotificationClient.pdb"
     },
     {
@@ -1749,7 +1749,7 @@
       "url": "sample-data\/weather.json"
     },
     {
-      "hash": "sha256-CZHEYAa1sWkR6CI6ieiKEUS6AeOOtQ5D8HhUaFlu1Ac=",
+      "hash": "sha256-vm7yIKGimZDSGZS1Dv9nkot5\/HuWkMMStOmbVwInTws=",
       "url": "site.js"
     },
     {
@@ -1761,5 +1761,5 @@
       "url": "PushNotificationClient.bundle.scp.css"
     }
   ],
-  "version": "\/g6m8CM0"
+  "version": "jXtlJWLp"
 };

@@ -98,15 +98,29 @@ using PushNotificationClient.Class;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 31 "C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\PushNotificationClient\PushNotificationClient\Pages\Index.razor"
+#line 25 "C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\PushNotificationClient\PushNotificationClient\Pages\Index.razor"
  
     static bool Installable = true;
     static Action OnInstallable;
+    static string subscription;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+    }
 
     protected override void OnInitialized()
     {
 
         OnInstallable = () => InvokeAsync(StateHasChanged);
+        EstaInstalado();
+    }
+
+    protected async Task EstaInstalado()
+    {
+        subscription = await JSRuntime.InvokeAsync<string>("DisplayMode.getPWADisplayMode");
+
     }
 
     [JSInvokable]
@@ -115,18 +129,6 @@ using PushNotificationClient.Class;
         await JSRuntime.InvokeVoidAsync("BlazorPWA.installPWA");
     }
 
-    public async Task GetToken()
-    {
-        UserInfo oUser = new UserInfo();
-
-        oUser.Email = "sss@dd.com";
-        oUser.Password = "eeee";
-
-        var response = await Http.PostAsJsonAsync("api/Token", oUser);
-        var message = response.Content.ReadAsStringAsync();
-
-        await localStorage.SetItemAsync("JWT", message.Result);
-    }
 
 #line default
 #line hidden

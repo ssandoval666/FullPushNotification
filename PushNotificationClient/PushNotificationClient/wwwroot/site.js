@@ -57,3 +57,28 @@ window.BlazorPWA = {
         }
     }
 };
+
+window.DisplayMode = {
+    getPWADisplayMode: function () {
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+        if (document.referrer.startsWith('android-app://')) {
+            console.log('twa');
+            return 'twa';
+        } else if (navigator.standalone || isStandalone) {
+            console.log('standalone');
+            return 'standalone';
+        }
+
+        console.log('browser');
+        return 'browser';
+    }
+};
+
+window.matchMedia('(display-mode: standalone)').addEventListener('change', (evt) => {
+    let displayMode = 'browser';
+    if (evt.matches) {
+        displayMode = 'standalone';
+    }
+    // Log display mode change to analytics
+    console.log('DISPLAY_MODE_CHANGED', displayMode);
+});

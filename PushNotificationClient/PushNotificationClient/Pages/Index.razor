@@ -11,13 +11,7 @@ Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
-
-<button class="installButton btn btn-primary" @onclick="@(() => GetToken())">GetToken</button>
-
-
-
-
-@if (Installable)
+@if ( (Installable) && (subscription == "browser") )
 {
     <div class="row justify-content-center">
         <div class="install-prompt col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
@@ -31,11 +25,25 @@ Welcome to your new app.
 {
     static bool Installable = true;
     static Action OnInstallable;
+    static string subscription;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+    }
 
     protected override void OnInitialized()
     {
 
         OnInstallable = () => InvokeAsync(StateHasChanged);
+        EstaInstalado();
+    }
+
+    protected async Task EstaInstalado()
+    {
+        subscription = await JSRuntime.InvokeAsync<string>("DisplayMode.getPWADisplayMode");
+
     }
 
     [JSInvokable]
@@ -44,16 +52,4 @@ Welcome to your new app.
         await JSRuntime.InvokeVoidAsync("BlazorPWA.installPWA");
     }
 
-    public async Task GetToken()
-    {
-        UserInfo oUser = new UserInfo();
-
-        oUser.Email = "sss@dd.com";
-        oUser.Password = "eeee";
-
-        var response = await Http.PostAsJsonAsync("api/Token", oUser);
-        var message = response.Content.ReadAsStringAsync();
-
-        await localStorage.SetItemAsync("JWT", message.Result);
-    }
 }
