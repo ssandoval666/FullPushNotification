@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jRV7KEeCFyhx2HXHn2q1L95FS80GYXAu63iVXDkBOUy8OG/fqgxCeV5R7ALJGUJZMRxHQXj1v8/tGQTQl38tHw==",
+  "dgSpecHash": "3uV5Jj2KNgRwlycMXwce3M/7AWaWdUF3862GzU4OfQ3PUK2/IUEHzarWurkV2W+iXfPxB2PMynKo78lIodq63w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sebastian Sandoval\\Documents\\GitHub\\FullPushNotification\\WebApiPushNotification\\WebApiPushNotification\\WebApiPushNotification.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Sebastian Sandoval\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.2.0\\microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512",

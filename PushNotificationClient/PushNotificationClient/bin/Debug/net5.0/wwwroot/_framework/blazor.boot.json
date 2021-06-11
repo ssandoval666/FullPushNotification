@@ -202,11 +202,11 @@
       "mscorlib.dll": "sha256-Szv3xvo7lpk3sOSYaxNzyNv5mvbj924w1WFbDXPnFzw=",
       "netstandard.dll": "sha256-5RchH5B6Yr3NhmDDCRemdr7RcRf4uoztuBOHhAnfYFI=",
       "System.Private.CoreLib.dll": "sha256-pKBnu1J3jSDAahjhvnU6QlCWaqhILfPfTxvPHPrj754=",
-      "PushNotificationClient.dll": "sha256-+Lkz2oirew2fn2PE5G1vef6bVPF28GbSlM7MRRGNboc="
+      "PushNotificationClient.dll": "sha256-wjeH8joJbTvyZVq\/ihXGWWc5yQpUfKq1NE1sof4uXmg="
     },
     "lazyAssembly": null,
     "pdb": {
-      "PushNotificationClient.pdb": "sha256-XJSVgcFio4mT\/jLERw3pZJHPIO9Q1PDdILJsCy9fdtM="
+      "PushNotificationClient.pdb": "sha256-ymGNsMHsicYHvzx45vnDcXIaJBUbG4wwdL0nSirJivw="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-6gpSboPIzpxslj3G69YAnbCNj40a6VNSTGz1e+LH00M=",

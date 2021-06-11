@@ -11,8 +11,10 @@ using WebPush;
 namespace JWTWebApi.Controllers
 {
     [Authorize]
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/Notification/[controller]")]
     public class SendNotificationController : ControllerBase
     {
         public IConfiguration _configuration;
@@ -24,6 +26,9 @@ namespace JWTWebApi.Controllers
             _configuration = config;
         }
 
+        /// <summary>  
+        /// Envio de Notificaciones Requiere JWT  
+        /// </summary>  
         [HttpPost]
         public async Task<IActionResult> SendNotification(NotificationMessageText oMessage)
         {

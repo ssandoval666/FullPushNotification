@@ -13,8 +13,10 @@ using Microsoft.AspNetCore.Authorization;
 namespace JWTWebApi.Controllers
 {
     [Authorize]
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/Notification/[controller]")]
     public class NotificationSubscribeController : ControllerBase
     {
         public IConfiguration _configuration;
@@ -24,7 +26,11 @@ namespace JWTWebApi.Controllers
             _configuration = config;
         }
 
+        /// <summary>  
+        /// Subcripcion para los PushNotification Requiere JWT  
+        /// </summary>
         [HttpPost]
+        [MapToApiVersion("1.0")]
         public async Task<IActionResult> NotificationSubscribe(NotificationSubscription oSubscripcion)
         {
             try

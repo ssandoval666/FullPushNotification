@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApiPushNotification</name>
+    </assembly>
+    <members>
+        <member name="M:WebApiPushNotification.Controllers.TokenController.Token(WebApiPushNotification.Models.UserInfo)">
+            <summary>  
+            Envio de Notificaciones JWT Token Authentication  
+            </summary>  
+        </member>
+        <member name="M:JWTWebApi.Controllers.NotificationSubscribeController.NotificationSubscribe(WebApiPushNotification.Class.NotificationSubscription)">
+            <summary>  
+            Subcripcion para los PushNotification Requiere JWT  
+            </summary>
+        </member>
+        <member name="M:JWTWebApi.Controllers.SendNotificationController.SendNotification(WebApiPushNotification.Class.NotificationMessageText)">
+            <summary>  
+            Envio de Notificaciones Requiere JWT  
+            </summary>  
+        </member>
+    </members>
+</doc>

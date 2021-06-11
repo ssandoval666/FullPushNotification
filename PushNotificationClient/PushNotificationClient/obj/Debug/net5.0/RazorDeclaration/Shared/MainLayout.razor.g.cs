@@ -135,7 +135,7 @@ using PushNotificationClient.Class;
             var JWToken = await localStorage.GetItemAsync<string>("JWT");
 
             Http.DefaultRequestHeaders.Add("Authorization", "Bearer " + JWToken);
-            var response = await Http.PostAsJsonAsync("api/NotificationSubscribe", subscription);
+            var response = await Http.PostAsJsonAsync("api/v1/Notification/NotificationSubscribe", subscription);
             //response.EnsureSuccessStatusCode();
 
         }
@@ -146,6 +146,7 @@ using PushNotificationClient.Class;
     public async Task GetToken()
     {
         var JWToken = await localStorage.GetItemAsync<string>("JWT");
+        JWToken = null;
 
         if (JWToken == null)
         {
@@ -154,7 +155,8 @@ using PushNotificationClient.Class;
             oUser.Email = "sss@dd.com";
             oUser.Password = "eeee";
 
-            var response = await Http.PostAsJsonAsync("api/Token", oUser);
+            //Http.DefaultRequestHeaders.Add("x-api-version", "1.0");
+            var response = await Http.PostAsJsonAsync("api/v1/Token/Token", oUser);
             var message = response.Content.ReadAsStringAsync();
 
             await localStorage.SetItemAsync("JWT", message.Result);

@@ -10,8 +10,10 @@ using System.Threading.Tasks;
 
 namespace WebApiPushNotification.Controllers
 {
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/Token/[controller]")]
     public class TokenController : ControllerBase
     {
         public IConfiguration _configuration;
@@ -21,7 +23,11 @@ namespace WebApiPushNotification.Controllers
             _configuration = config;
         }
 
+        /// <summary>  
+        /// Envio de Notificaciones JWT Token Authentication  
+        /// </summary>  
         [HttpPost]
+        [MapToApiVersion("1.0")]
         public async Task<IActionResult> Token(UserInfo _userData)
         {
 
