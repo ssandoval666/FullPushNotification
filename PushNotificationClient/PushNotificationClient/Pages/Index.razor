@@ -1,0 +1,59 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime
+@inject HttpClient Http
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+@using PushNotificationClient.Class
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+<button class="installButton btn btn-primary" @onclick="@(() => GetToken())">GetToken</button>
+
+
+
+
+@if (Installable)
+{
+    <div class="row justify-content-center">
+        <div class="install-prompt col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+            <span>Install app?</span>
+            <button class="installButton btn btn-primary" @onclick="@(() => InstallClicked())">Yes</button>
+            <button class="cancelButton btn btn-danger" @onclick="@(() => Installable = false)">No</button>
+        </div>
+    </div>}
+
+@code
+{
+    static bool Installable = true;
+    static Action OnInstallable;
+
+    protected override void OnInitialized()
+    {
+
+        OnInstallable = () => InvokeAsync(StateHasChanged);
+    }
+
+    [JSInvokable]
+    public async Task InstallClicked()
+    {
+        await JSRuntime.InvokeVoidAsync("BlazorPWA.installPWA");
+    }
+
+    public async Task GetToken()
+    {
+        UserInfo oUser = new UserInfo();
+
+        oUser.Email = "sss@dd.com";
+        oUser.Password = "eeee";
+
+        var response = await Http.PostAsJsonAsync("api/Token", oUser);
+        var message = response.Content.ReadAsStringAsync();
+
+        await localStorage.SetItemAsync("JWT", message.Result);
+    }
+}

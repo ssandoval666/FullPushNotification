@@ -1,0 +1,7 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\PushNotificationClient\PushNotificationClient\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\PushNotificationClient\PushNotificationClient\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/Blazorise" Path="C:\Users\Sebastian Sandoval\.nuget\packages\blazorise\0.9.3.8\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Blazorise.Bootstrap" Path="C:\Users\Sebastian Sandoval\.nuget\packages\blazorise.bootstrap\0.9.3.8\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Blazorise.Material" Path="C:\Users\Sebastian Sandoval\.nuget\packages\blazorise.material\0.9.3.8\build\..\staticwebassets\" />
+</StaticWebAssets>

@@ -1,0 +1,51 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
+@inject HttpClient Http
+
+@using PushNotificationClient.Class
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <div class="main">
+        <div class="top-row px-4">
+            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+        </div>
+
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>
+</div>
+
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+            await RequestNotificationSubscriptionAsync();
+
+    }
+
+    private async Task RequestNotificationSubscriptionAsync()
+    {
+        var subscription = await JSRuntime.InvokeAsync<NotificationSubscription>("blazoring.requestSubscription");
+        if (subscription != null)
+        {
+            await SubscribeToNotifications(subscription);
+        }
+    }
+
+    public async Task SubscribeToNotifications(NotificationSubscription subscription)
+    {
+       
+        var response = await Http.PostAsJsonAsync("api/NotificationSubscribe", subscription);
+        //response.EnsureSuccessStatusCode();
+        
+    }
+
+    
+}
