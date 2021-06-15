@@ -5,57 +5,79 @@ using System.Threading.Tasks;
 
 namespace WebApiPushNotification.Class
 {
+    ///<Summary>
+    /// Clase para el Manejo de Subscripciones
+    ///</Summary>
     public class NotificationSubscription
     {
+        ///<Summary>
+        /// Url donde se mandaran los push
+        ///</Summary>
         public string Url { get; set; }
 
+        ///<Summary>
+        /// Key
+        ///</Summary>
         public string P256dh { get; set; }
 
+        ///<Summary>
+        /// Autorizacion
+        ///</Summary>
         public string Auth { get; set; }
     }
 
+    ///<Summary>
+    /// Clase para el envio de mensajes
+    ///</Summary>
+    ///
     public class NotificationMessageText
     {
+        ///<Summary>
+        /// Mensaje de la notificacion
+        ///</Summary>
         public string message { get; set; }
+
+        ///<Summary>
+        /// Cuerpo de la notificacion
+        ///</Summary>
         public string body { get; set; }
+
+        ///<Summary>
+        /// Acciones de la notificacion
+        ///</Summary>
         public NotifationAction[] actions { get; set; }
+
+        ///<Summary>
+        /// Indica si la notificacion requiere interaccion
+        ///</Summary>
         public bool requireInteraction { get; set; } = true;
+
+        ///<Summary>
+        /// Para el tipo de vibracion
+        ///</Summary>
         public int[] vibrate { get; set; } = new int[] { 100, 50, 100 };
     }
 
-    public class NotificationImage : NotificationMessageText
-    {
-        public string badge { get; set; }
-        public string image { get; set; }
-        public string icon { get; set; }
-    }
-
+    ///<Summary>
+    /// Clase de Acciones
+    ///</Summary>
     public class NotifationAction
     {
+        ///<Summary>
+        /// Tipo de accion
+        ///</Summary>
         public string action { get; set; }
+
+        ///<Summary>
+        /// Descripcion
+        ///</Summary>
         public string title { get; set; }
+
+        ///<Summary>
+        /// Icono de la descripcion
+        ///</Summary>
         public string icon { get; set; }
     }
 
-    /*
-     *  event.waitUntil(self.registration.showNotification('Codegen 2021 news!',
-        {
-            body: payload.message,
-            icon: 'icon-512.png',
-            badge: 'icon-512.png',
-            image: 'cat.png',
-            vibrate: [100, 50, 100],
-            data: { url: payload.url },
-            requireInteraction: true,
-            actions: [
-                {
-                    action: "agenda", title: "Open Agenda", icon: 'icon-512.png'
-                },
-                {
-                    action: "close", title: "Ignore",
-                },
-            ]
-        })
-    );    
-     */
+   
 }

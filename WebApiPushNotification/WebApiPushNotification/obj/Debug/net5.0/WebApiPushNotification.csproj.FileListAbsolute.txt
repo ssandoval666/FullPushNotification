@@ -97,3 +97,4 @@ C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\WebApiPushNoti
 C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\WebApiPushNotification\WebApiPushNotification\obj\Debug\net5.0\ref\WebApiPushNotification.dll
 C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\WebApiPushNotification\WebApiPushNotification\obj\Debug\net5.0\WebApiPushNotification.pdb
 C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\WebApiPushNotification\WebApiPushNotification\obj\Debug\net5.0\WebApiPushNotification.genruntimeconfig.cache
+C:\Users\Sebastian Sandoval\Documents\GitHub\FullPushNotification\WebApiPushNotification\WebApiPushNotification\obj\Debug\net5.0\WebApiPushNotification.csproj.AssemblyReference.cache

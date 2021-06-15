@@ -9,13 +9,25 @@ using System.Threading.Tasks;
 
 namespace WebApiPushNotification
 {
+    ///<Summary>
+    /// Program Principal
+    ///</Summary>
+    ///
     public class Program
     {
+        ///<Summary>
+        /// Principal
+        ///</Summary>
+        ///
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
         }
 
+        ///<Summary>
+        /// Constructor del Host
+        ///</Summary>
+        ///
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>

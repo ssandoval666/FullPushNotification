@@ -4,15 +4,260 @@
         <name>WebApiPushNotification</name>
     </assembly>
     <members>
+        <member name="T:WebApiPushNotification.Class.NotificationSubscription">
+            <Summary>
+             Clase para el Manejo de Subscripciones
+            </Summary>
+        </member>
+        <member name="P:WebApiPushNotification.Class.NotificationSubscription.Url">
+            <Summary>
+             Url donde se mandaran los push
+            </Summary>
+        </member>
+        <member name="P:WebApiPushNotification.Class.NotificationSubscription.P256dh">
+            <Summary>
+             Key
+            </Summary>
+        </member>
+        <member name="P:WebApiPushNotification.Class.NotificationSubscription.Auth">
+            <Summary>
+             Autorizacion
+            </Summary>
+        </member>
+        <member name="T:WebApiPushNotification.Class.NotificationMessageText">
+            <Summary>
+             Clase para el envio de mensajes
+            </Summary>
+            
+        </member>
+        <member name="P:WebApiPushNotification.Class.NotificationMessageText.message">
+            <Summary>
+             Mensaje de la notificacion
+            </Summary>
+        </member>
+        <member name="P:WebApiPushNotification.Class.NotificationMessageText.body">
+            <Summary>
+             Cuerpo de la notificacion
+            </Summary>
+        </member>
+        <member name="P:WebApiPushNotification.Class.NotificationMessageText.actions">
+            <Summary>
+             Acciones de la notificacion
+            </Summary>
+        </member>
+        <member name="P:WebApiPushNotification.Class.NotificationMessageText.requireInteraction">
+            <Summary>
+             Indica si la notificacion requiere interaccion
+            </Summary>
+        </member>
+        <member name="P:WebApiPushNotification.Class.NotificationMessageText.vibrate">
+            <Summary>
+             Para el tipo de vibracion
+            </Summary>
+        </member>
+        <member name="T:WebApiPushNotification.Class.NotifationAction">
+            <Summary>
+             Clase de Acciones
+            </Summary>
+        </member>
+        <member name="P:WebApiPushNotification.Class.NotifationAction.action">
+            <Summary>
+             Tipo de accion
+            </Summary>
+        </member>
+        <member name="P:WebApiPushNotification.Class.NotifationAction.title">
+            <Summary>
+             Descripcion
+            </Summary>
+        </member>
+        <member name="P:WebApiPushNotification.Class.NotifationAction.icon">
+            <Summary>
+             Icono de la descripcion
+            </Summary>
+        </member>
+        <member name="T:WebApiPushNotification.Class.WebPushNotificationConfig">
+            <Summary>
+             Clase de la Config de la Notificacion
+            </Summary>
+            
+        </member>
+        <member name="P:WebApiPushNotification.Class.WebPushNotificationConfig.Subject">
+            <Summary>
+             Subject
+            </Summary>
+            
+        </member>
+        <member name="P:WebApiPushNotification.Class.WebPushNotificationConfig.PublicKey">
+            <Summary>
+             Clave Publica
+            </Summary>
+            
+        </member>
+        <member name="P:WebApiPushNotification.Class.WebPushNotificationConfig.PrivateKey">
+            <Summary>
+             Clave Privada
+            </Summary>
+            
+        </member>
+        <member name="T:WebApiPushNotification.Controllers.TokenController">
+            <Summary>
+             Controlador para el manejo de Token
+            </Summary>
+            
+        </member>
+        <member name="F:WebApiPushNotification.Controllers.TokenController._configuration">
+            <Summary>
+             Parametros de configuracion
+            </Summary>
+            
+        </member>
+        <member name="M:WebApiPushNotification.Controllers.TokenController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <Summary>
+             Creacion de Instancia con parametos de configuracion
+            </Summary>
+            
+        </member>
         <member name="M:WebApiPushNotification.Controllers.TokenController.Token(WebApiPushNotification.Models.UserInfo)">
             <summary>  
             Envio de Notificaciones JWT Token Authentication  
             </summary>  
         </member>
+        <member name="T:WebApiPushNotification.Models.UserInfo">
+            <Summary>
+             Clase de Datos de Acceso
+            </Summary>
+            
+        </member>
+        <member name="P:WebApiPushNotification.Models.UserInfo.UserId">
+            <Summary>
+             Id de usuario
+            </Summary>
+            
+        </member>
+        <member name="P:WebApiPushNotification.Models.UserInfo.FirstName">
+            <Summary>
+             Nombre
+            </Summary>
+            
+        </member>
+        <member name="P:WebApiPushNotification.Models.UserInfo.LastName">
+            <Summary>
+             Apellido
+            </Summary>
+            
+        </member>
+        <member name="P:WebApiPushNotification.Models.UserInfo.UserName">
+            <Summary>
+             Nombre de Usuario
+            </Summary>
+            
+        </member>
+        <member name="P:WebApiPushNotification.Models.UserInfo.Email">
+            <Summary>
+             Correo Electronico
+            </Summary>
+            
+        </member>
+        <member name="P:WebApiPushNotification.Models.UserInfo.Password">
+            <Summary>
+             Contraseña
+            </Summary>
+            
+        </member>
+        <member name="P:WebApiPushNotification.Models.UserInfo.CreatedDate">
+            <Summary>
+             Fecha de Creacion
+            </Summary>
+            
+        </member>
+        <member name="T:WebApiPushNotification.Program">
+            <Summary>
+             Program Principal
+            </Summary>
+            
+        </member>
+        <member name="M:WebApiPushNotification.Program.Main(System.String[])">
+            <Summary>
+             Principal
+            </Summary>
+            
+        </member>
+        <member name="M:WebApiPushNotification.Program.CreateHostBuilder(System.String[])">
+            <Summary>
+             Constructor del Host
+            </Summary>
+            
+        </member>
+        <member name="T:WebApiPushNotification.Startup">
+            <Summary>
+             Inicio del Web Api
+            </Summary>
+            
+        </member>
+        <member name="M:WebApiPushNotification.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <Summary>
+             Inicio del Web Api
+            </Summary>
+            
+        </member>
+        <member name="P:WebApiPushNotification.Startup.Configuration">
+            <Summary>
+             Parametro ConfigurACION
+            </Summary>
+            
+        </member>
+        <member name="M:WebApiPushNotification.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <Summary>
+             Configuracion de los Servicios del contenedor
+            </Summary>
+            
+        </member>
+        <member name="M:WebApiPushNotification.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <Summary>
+             Configurador del Controlador
+            </Summary>
+            
+        </member>
+        <member name="T:JWTWebApi.Controllers.NotificationSubscribeController">
+            <Summary>
+             Controlador para el Manejo de la subscripcion
+            </Summary>
+            
+        </member>
+        <member name="F:JWTWebApi.Controllers.NotificationSubscribeController._configuration">
+            <Summary>
+             Parametro de Configuracion
+            </Summary>
+            
+        </member>
+        <member name="M:JWTWebApi.Controllers.NotificationSubscribeController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <Summary>
+             Controlador para el Manejo de la subscripcion
+            </Summary>
+            
+        </member>
         <member name="M:JWTWebApi.Controllers.NotificationSubscribeController.NotificationSubscribe(WebApiPushNotification.Class.NotificationSubscription)">
             <summary>  
             Subcripcion para los PushNotification Requiere JWT  
             </summary>
+        </member>
+        <member name="T:JWTWebApi.Controllers.SendNotificationController">
+            <Summary>
+             Controlador para el Envio de mensajes
+            </Summary>
+            
+        </member>
+        <member name="F:JWTWebApi.Controllers.SendNotificationController._configuration">
+            <Summary>
+             CParametros de configuracion
+            </Summary>
+            
+        </member>
+        <member name="M:JWTWebApi.Controllers.SendNotificationController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <Summary>
+             Controlador para el Envio de mensajes
+            </Summary>
+            
         </member>
         <member name="M:JWTWebApi.Controllers.SendNotificationController.SendNotification(WebApiPushNotification.Class.NotificationMessageText)">
             <summary>  

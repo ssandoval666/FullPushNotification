@@ -10,6 +10,11 @@ using WebPush;
 
 namespace JWTWebApi.Controllers
 {
+    ///<Summary>
+    /// Controlador para el Envio de mensajes
+    ///</Summary>
+    ///
+
     [Authorize]
     //[Route("api/[controller]")]
     [ApiController]
@@ -17,10 +22,17 @@ namespace JWTWebApi.Controllers
     [Route("api/v{version:apiVersion}/Notification/[controller]")]
     public class SendNotificationController : ControllerBase
     {
+        ///<Summary>
+        /// CParametros de configuracion
+        ///</Summary>
+        ///
         public IConfiguration _configuration;
         private readonly WebPushNotificationConfig webPushNotification = new WebPushNotificationConfig();
 
-
+        ///<Summary>
+        /// Controlador para el Envio de mensajes
+        ///</Summary>
+        ///
         public SendNotificationController(IConfiguration config)
         {
             _configuration = config;

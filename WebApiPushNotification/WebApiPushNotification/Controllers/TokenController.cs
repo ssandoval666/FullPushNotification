@@ -10,14 +10,27 @@ using System.Threading.Tasks;
 
 namespace WebApiPushNotification.Controllers
 {
+    ///<Summary>
+    /// Controlador para el manejo de Token
+    ///</Summary>
+    ///
+
     //[Route("api/[controller]")]
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/Token/[controller]")]
     public class TokenController : ControllerBase
     {
+        ///<Summary>
+        /// Parametros de configuracion
+        ///</Summary>
+        ///
         public IConfiguration _configuration;
 
+        ///<Summary>
+        /// Creacion de Instancia con parametos de configuracion
+        ///</Summary>
+        ///
         public TokenController(IConfiguration config)
         {
             _configuration = config;
@@ -28,6 +41,7 @@ namespace WebApiPushNotification.Controllers
         /// </summary>  
         [HttpPost]
         [MapToApiVersion("1.0")]
+#pragma warning disable 1998
         public async Task<IActionResult> Token(UserInfo _userData)
         {
 

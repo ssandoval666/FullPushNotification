@@ -146,7 +146,7 @@ using PushNotificationClient.Class;
     public async Task GetToken()
     {
         var JWToken = await localStorage.GetItemAsync<string>("JWT");
-        JWToken = null;
+        //JWToken = null;
 
         if (JWToken == null)
         {

@@ -20,6 +20,10 @@ using System.Threading.Tasks;
 
 namespace WebApiPushNotification
 {
+    ///<Summary>
+    /// Inicio del Web Api
+    ///</Summary>
+    ///
     public class Startup
     {
         static string XmlCommentsFilePath
@@ -32,14 +36,26 @@ namespace WebApiPushNotification
             }
         }
 
+        ///<Summary>
+        /// Inicio del Web Api
+        ///</Summary>
+        ///
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        ///<Summary>
+        /// Parametro ConfigurACION
+        ///</Summary>
+        ///
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        ///<Summary>
+        /// Configuracion de los Servicios del contenedor
+        ///</Summary>
+        ///
         public void ConfigureServices(IServiceCollection services)
         {
             // Add Cors
@@ -143,6 +159,10 @@ namespace WebApiPushNotification
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        ///<Summary>
+        /// Configurador del Controlador
+        ///</Summary>
+        ///
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

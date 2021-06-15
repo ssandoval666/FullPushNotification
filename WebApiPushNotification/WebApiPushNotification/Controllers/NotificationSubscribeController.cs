@@ -12,6 +12,10 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace JWTWebApi.Controllers
 {
+    ///<Summary>
+    /// Controlador para el Manejo de la subscripcion
+    ///</Summary>
+    ///
     [Authorize]
     //[Route("api/[controller]")]
     [ApiController]
@@ -19,7 +23,16 @@ namespace JWTWebApi.Controllers
     [Route("api/v{version:apiVersion}/Notification/[controller]")]
     public class NotificationSubscribeController : ControllerBase
     {
+        ///<Summary>
+        /// Parametro de Configuracion
+        ///</Summary>
+        ///
         public IConfiguration _configuration;
+
+        ///<Summary>
+        /// Controlador para el Manejo de la subscripcion
+        ///</Summary>
+        ///
 
         public NotificationSubscribeController(IConfiguration config)
         {
@@ -31,6 +44,7 @@ namespace JWTWebApi.Controllers
         /// </summary>
         [HttpPost]
         [MapToApiVersion("1.0")]
+#pragma warning disable 1998
         public async Task<IActionResult> NotificationSubscribe(NotificationSubscription oSubscripcion)
         {
             try
@@ -65,7 +79,9 @@ namespace JWTWebApi.Controllers
 
             }
             catch (Exception ex)
-            { }
+            {
+                return NotFound(ex);
+            }
 
             return Ok();
         }
